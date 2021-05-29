@@ -76,3 +76,13 @@ body {
       border-left: darkgrey;
       
   }
+
+  #savebtn {
+      background-color: dodgerblue;
+      color: floralwhite;
+      border-bottom-left-radius: 5px;
+  }
+
+  #textspace {
+      position:relative 25%;
+  }
