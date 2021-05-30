@@ -57,7 +57,10 @@ body {
     color: white;
   }
   
-  
+  button {
+      height: 80px;
+      width: 175px;
+  }
   
   
   
