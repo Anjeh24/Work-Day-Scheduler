@@ -4,9 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -22,156 +19,145 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="moment.min.js"></script>
     <title>Work Day Scheduler</title>
-
-
-
   </head>
 
-  <body>
+  <body onload="checkTime()">
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-       
       <!-- Timeblocks go here -->
-      
-</div>
-<div class="container">
-  <div class="row justify-content-md-center border-top border-bottom">
-    <div id="t1" class="col-md-1" value="9">9 AM</div>
-    <textarea class="col-md-8" id="text1"></textarea>
-    <button
-      id="save"
-      class="col-md-1"
-      onclick="saveToLocal(document.getElementById('text1'))"
-    >
-      SAVE
-    </button>
-  </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-md-center border-top border-bottom">
+        <div id="t1" class="col-md-1" value="9">9 AM</div>
+        <textarea class="col-md-8" id="text1"></textarea>
+        <button
+          id="save"
+          class="col-md-1"
+          onclick="saveToLocal(document.getElementById('text1'))"
+        >
+          SAVE
+        </button>
+      </div>
 
-  <div class="row justify-content-md-center border-top border-bottom">
-    <div id="t2" class="col-md-1" value="10">10 AM</div>
-    <textarea class="col-md-8" id="text2"></textarea>
-    <button
-      id="save"
-      class="col-md-1"
-      onclick="saveToLocal(document.getElementById('text2'))"
-    >
-      SAVE
-    </button>
-  </div>
+      <div class="row justify-content-md-center border-top border-bottom">
+        <div id="t2" class="col-md-1" value="10">10 AM</div>
+        <textarea class="col-md-8" id="text2"></textarea>
+        <button
+          id="save"
+          class="col-md-1"
+          onclick="saveToLocal(document.getElementById('text2'))"
+        >
+          SAVE
+        </button>
+      </div>
 
-  <div class="row justify-content-md-center border-top border-bottom">
-    <div id="t3" class="col-md-1" value="11">11 AM</div>
+      <div class="row justify-content-md-center border-top border-bottom">
+        <div id="t3" class="col-md-1" value="11">11 AM</div>
 
-    <textarea class="col-md-8" id="text3"></textarea>
+        <textarea class="col-md-8" id="text3"></textarea>
 
-    <button
-      id="save"
-      class="col-md-1"
-      onclick="saveToLocal(document.getElementById('text3'))"
-    >
-      SAVE
-    </button>
-  </div>
+        <button
+          id="save"
+          class="col-md-1"
+          onclick="saveToLocal(document.getElementById('text3'))"
+        >
+          SAVE
+        </button>
+      </div>
 
-  <div class="row justify-content-md-center border-top border-bottom">
-    <div id="t4" class="col-md-1" value="12">12 PM</div>
+      <div class="row justify-content-md-center border-top border-bottom">
+        <div id="t4" class="col-md-1" value="12">12 PM</div>
 
-    <textarea class="col-md-8" id="text4"></textarea>
+        <textarea class="col-md-8" id="text4"></textarea>
 
-    <button
-      id="save"
-      class="col-md-1"
-      onclick="saveToLocal(document.getElementById('text4'))"
-    >
-      SAVE
-    </button>
-  </div>
+        <button
+          id="save"
+          class="col-md-1"
+          onclick="saveToLocal(document.getElementById('text4'))"
+        >
+          SAVE
+        </button>
+      </div>
 
-  <div class="row justify-content-md-center border-top border-bottom">
-    <div id="t5" class="col-md-1" value="13">1 PM</div>
+      <div class="row justify-content-md-center border-top border-bottom">
+        <div id="t5" class="col-md-1" value="13">1 PM</div>
 
-    <textarea class="col-md-8" id="text5"></textarea>
+        <textarea class="col-md-8" id="text5"></textarea>
 
-    <button
-      id="save"
-      class="col-md-1"
-      onclick="saveToLocal(document.getElementById('text5'))"
-    >
-      SAVE
-    </button>
-  </div>
+        <button
+          id="save"
+          class="col-md-1"
+          onclick="saveToLocal(document.getElementById('text5'))"
+        >
+          SAVE
+        </button>
+      </div>
 
-  <div class="row justify-content-md-center border-top border-bottom">
-    <div id="t6" class="col-md-1" value="14">2 PM</div>
+      <div class="row justify-content-md-center border-top border-bottom">
+        <div id="t6" class="col-md-1" value="14">2 PM</div>
 
-    <textarea class="col-md-8" id="text6"></textarea>
+        <textarea class="col-md-8" id="text6"></textarea>
 
-    <button
-      id="save"
-      class="col-md-1"
-      onclick="saveToLocal(document.getElementById('text6'))"
-    >
-      SAVE
-    </button>
-  </div>
+        <button
+          id="save"
+          class="col-md-1"
+          onclick="saveToLocal(document.getElementById('text6'))"
+        >
+          SAVE
+        </button>
+      </div>
 
-  <div class="row justify-content-md-center border-top border-bottom">
-    <div id="t7" class="col-md-1" value="15">3 PM</div>
+      <div class="row justify-content-md-center border-top border-bottom">
+        <div id="t7" class="col-md-1" value="15">3 PM</div>
 
-    <textarea class="col-md-8" id="text7"></textarea>
+        <textarea class="col-md-8" id="text7"></textarea>
 
-    <button
-      id="save"
-      class="col-md-1"
-      onclick="saveToLocal(document.getElementById('text7'))"
-    >
-      SAVE
-    </button>
-  </div>
+        <button
+          id="save"
+          class="col-md-1"
+          onclick="saveToLocal(document.getElementById('text7'))"
+        >
+          SAVE
+        </button>
+      </div>
 
-  <div class="row justify-content-md-center border-top border-bottom">
-    <div id="t8" class="col-md-1" value="16">4 PM</div>
+      <div class="row justify-content-md-center border-top border-bottom">
+        <div id="t8" class="col-md-1" value="16">4 PM</div>
 
-    <textarea class="col-md-8" id="text8"></textarea>
+        <textarea class="col-md-8" id="text8"></textarea>
 
-    <button
-      id="save"
-      class="col-md-1"
-      onclick="saveToLocal(document.getElementById('text8'))"
-    >
-      SAVE
-    </button>
-  </div>
+        <button
+          id="save"
+          class="col-md-1"
+          onclick="saveToLocal(document.getElementById('text8'))"
+        >
+          SAVE
+        </button>
+      </div>
 
-  <div class="row justify-content-md-center border-top border-bottom">
-    <div id="t9" class="col-md-1" value="17">5 PM</div>
+      <div class="row justify-content-md-center border-top border-bottom">
+        <div id="t9" class="col-md-1" value="17">5 PM</div>
 
-    <textarea class="col-md-8" id="text9"></textarea>
+        <textarea class="col-md-8" id="text9"></textarea>
 
-    <button
-      id="save"
-      class="col-md-1"
-      onclick="saveToLocal(document.getElementById('text9'))"
-    >
-      SAVE
-    </button>
-  </div>
-</div>
-
+        <button
+          id="save"
+          class="col-md-1"
+          onclick="saveToLocal(document.getElementById('text9'))"
+        >
+          SAVE
+        </button>
+      </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
     <script src="script.js"></script>
-
-    
   </body>
 </html>

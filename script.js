@@ -1,30 +1,48 @@
 //displaying present day and time using moment.js
-var dayofWeek = moment().format('MMMM Do YYYY, h:mm:ss a');
-$("#currentDay").text(dayofWeek);
+function checkTime() {
+  var dayofWeek = moment().format("MMMM Do YYYY, h:mm:ss a");
+  $("#currentDay").text(dayofWeek);
+  savedText();
+  changeColor();
+}
 
+//Saves entries to local storage
+function saveToLocal(obj) {
+  var text = obj.value;
+  var id = obj.id;
+  localStorage.setItem(id, text);
+}
 
-//Using presentHour to decide if the hour matches that displayed in header so as to apply color change
-
-var presentHour = moment().format('LT');
-
-var allhoursValue = ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM'];
-var exactHour = presentHour;
-var futureHour = presentHour < allhoursValue;
-var pastHour = allhoursValue < exactHour;
-
-console.log(presentHour)
-console.log(exactHour)
-console.log(pastHour)
-
-function colorChange() {
-    if (exactHour == presentHour){
-        document.getElementsByClassName('col2').style.backgroundColor = 'red';
+function savedText() {
+  var savedKey = Object.keys(localStorage);
+  console.log(savedKey);
+  for (let i = 0; i < savedKey.length; i++) {
+    if (document.getElementById(savedKey[i]) != null) {
+      document.getElementById(savedKey[i]).textContent = localStorage.getItem(
+        savedKey[i]
+      );
     }
-    else if (pastHour < presentHour){
-        document.getElementsByClassName('col2').style.backgroundColor = 'grey';
+  }
+}
+// Color change code for different hours. Current, past, and future. The for loop will go through every hour and we have less than 10 business hours on the scheduler.
+function changeColor() {
+  var currentTime = moment().format("H");
+  for (var i = 1; i < 10; i++) {
+    var index = i.toString();
+
+    var div1 = document.getElementById("t".concat(index));
+    var div2 = document.getElementById("text".concat(index));
+
+    if (
+      Number.parseInt(div1.getAttribute("value")) < Number.parseInt(currentTime)
+    ) {
+      div2.style.backgroundColor = "gray";
+    } else if (
+      Number.parseInt(div1.getAttribute("value")) > Number.parseInt(currentTime)
+    ) {
+      div2.style.backgroundColor = "red";
+    } else {
+      div2.style.backgroundColor = "green";
     }
-    else (presentHour > futureHour) 
-    {
-        document.getElementsByClassName('col2').style.backgroundColor = 'green';
-    }
+  }
 }
