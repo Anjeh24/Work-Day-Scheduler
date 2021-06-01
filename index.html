@@ -40,179 +40,132 @@
     <div class="container">
        
       <!-- Timeblocks go here -->
-      <div class="container">
-        <div class="row align-items-start">
-
-            <div class="col">
-                TIME
-              </div>
-
-          <div class="col">
-            ACTIVITY
-          </div>
-          <div class="col">
-            STATUS
-          </div>
-         
-          
-          
-
-        </div>
-        <hr>
-
-        <div class="row align-items-center">
-          <div class="col">
-            9 AM
-          </div>
-          <hr>
-          <div class="col">
-              <textarea id="textspace">
-            
-              </textarea> 
-          </div>
-          <div class="col3">
-              <button id="savebtn" type="button" value="button">
-
-            SAVE
-            <i class='fas fa-lock' style='font-size:24px;color:rgb(0, 255, 106)'></i>
-
-              </button>
-          </div>
-        </div>
-        <hr>
-        <div class="row align-items-end">
-          <div class="col">
-            10 AM
-          </div>
-          <hr>
-          <div class="col">
-              <textarea id="textspace">
-
-              </textarea>
-            
-          </div>
-          <div class="col3">
-            <button id="savebtn" type="button" value="button">
-            SAVE
-            <i class='fas fa-lock' style='font-size:24px;color:rgb(14, 199, 54)'></i>
-            </button>
-          </div>
-        </div>
-        <hr>
-
-        <div class="row align-items-end">
-            <div class="col">
-              11 AM
-            </div>
-            <div class="col">
-                <textarea id="textspace"></textarea>
-              
-            </div>
-            <div class="col3">
-                <button id="savebtn" type="button" value="button">
-              SAVE
-              <i class='fas fa-lock' style='font-size:24px;color:rgb(14, 199, 54)'></i>
-                </button>
-            </div>
-          </div>
-           <hr>
-
-          <div class="row align-items-end">
-            <div class="col">
-              12 PM
-            </div>
-            <div class="col">
-              <textarea id="textspace"></textarea>
-            </div>
-            <div class="col3">
-                <button id="savebtn" type="button" value="button">
-              SAVE
-              <i class='fas fa-lock' style='font-size:24px;color:rgb(14, 199, 54)'></i>
-                </button>
-            </div>
-          </div>
-          <hr>
-
-          <div class="row align-items-end">
-            <div class="col">
-              1 PM
-            </div>
-            <div class="col">
-              <textarea id="textspace"></textarea>
-            </div>
-            <div class="col3">
-                <button id="savebtn" type="button" value="button">
-              SAVE
-              <i class='fas fa-lock' style='font-size:24px;color:rgb(14, 199, 54)'></i>
-                </button>
-            </div>
-          </div>
-          <hr>
-
-          <div class="row align-items-end">
-            <div class="col">
-              2PM
-            </div>
-            <div class="col">
-              <textarea id="textspace"></textarea>
-            </div>
-            <div class="col3">
-                <button id="savebtn" type="button" value="button">
-              SAVE
-              <i class='fas fa-lock' style='font-size:24px;color:rgb(14, 199, 54)'></i>
-                </button>
-            </div>
-          </div>
-         <hr>
-         <div class="row align-items-end">
-            <div class="col">
-              3PM
-            </div>
-            <div class="col">
-              <textarea id="textspace"></textarea>
-            </div>
-            <div class="col3">
-                <button id="savebtn" type="button" value="button">
-              SAVE
-              <i class='fas fa-lock' style='font-size:24px;color:rgb(14, 199, 54)'></i>
-                </button>
-            </div>
-          </div>
-<hr>
-<div class="row align-items-end">
-    <div class="col">
-      4PM
-    </div>
-    <div class="col">
-      <textarea id="textspace"></textarea>
-    </div>
-    <div class="col3">
-        <button id="savebtn" type="button" value="button">
+      
+</div>
+<div class="container">
+  <div class="row justify-content-md-center border-top border-bottom">
+    <div id="t1" class="col-md-1" value="9">9 AM</div>
+    <textarea class="col-md-8" id="text1"></textarea>
+    <button
+      id="save"
+      class="col-md-1"
+      onclick="saveToLocal(document.getElementById('text1'))"
+    >
       SAVE
-      <i class='fas fa-lock' style='font-size:24px;color:rgb(14, 199, 54)'></i>
-        </button>
-    </div>
-  </div>
-<hr>
-<div class="row align-items-end">
-    <div class="col">
-      5PM
-    </div>
-    <div class="col">
-      <textarea id="textspace"></textarea>
-    </div>
-    <div class="col3">
-        <button id="savebtn" type="button" value="button">
-      SAVE
-      <i class='fas fa-lock' style='font-size:24px;color:rgb(14, 199, 54)'></i>
-        </button>
-    </div>
+    </button>
   </div>
 
-      </div>
+  <div class="row justify-content-md-center border-top border-bottom">
+    <div id="t2" class="col-md-1" value="10">10 AM</div>
+    <textarea class="col-md-8" id="text2"></textarea>
+    <button
+      id="save"
+      class="col-md-1"
+      onclick="saveToLocal(document.getElementById('text2'))"
+    >
+      SAVE
+    </button>
+  </div>
 
+  <div class="row justify-content-md-center border-top border-bottom">
+    <div id="t3" class="col-md-1" value="11">11 AM</div>
 
-    </div>
+    <textarea class="col-md-8" id="text3"></textarea>
+
+    <button
+      id="save"
+      class="col-md-1"
+      onclick="saveToLocal(document.getElementById('text3'))"
+    >
+      SAVE
+    </button>
+  </div>
+
+  <div class="row justify-content-md-center border-top border-bottom">
+    <div id="t4" class="col-md-1" value="12">12 PM</div>
+
+    <textarea class="col-md-8" id="text4"></textarea>
+
+    <button
+      id="save"
+      class="col-md-1"
+      onclick="saveToLocal(document.getElementById('text4'))"
+    >
+      SAVE
+    </button>
+  </div>
+
+  <div class="row justify-content-md-center border-top border-bottom">
+    <div id="t5" class="col-md-1" value="13">1 PM</div>
+
+    <textarea class="col-md-8" id="text5"></textarea>
+
+    <button
+      id="save"
+      class="col-md-1"
+      onclick="saveToLocal(document.getElementById('text5'))"
+    >
+      SAVE
+    </button>
+  </div>
+
+  <div class="row justify-content-md-center border-top border-bottom">
+    <div id="t6" class="col-md-1" value="14">2 PM</div>
+
+    <textarea class="col-md-8" id="text6"></textarea>
+
+    <button
+      id="save"
+      class="col-md-1"
+      onclick="saveToLocal(document.getElementById('text6'))"
+    >
+      SAVE
+    </button>
+  </div>
+
+  <div class="row justify-content-md-center border-top border-bottom">
+    <div id="t7" class="col-md-1" value="15">3 PM</div>
+
+    <textarea class="col-md-8" id="text7"></textarea>
+
+    <button
+      id="save"
+      class="col-md-1"
+      onclick="saveToLocal(document.getElementById('text7'))"
+    >
+      SAVE
+    </button>
+  </div>
+
+  <div class="row justify-content-md-center border-top border-bottom">
+    <div id="t8" class="col-md-1" value="16">4 PM</div>
+
+    <textarea class="col-md-8" id="text8"></textarea>
+
+    <button
+      id="save"
+      class="col-md-1"
+      onclick="saveToLocal(document.getElementById('text8'))"
+    >
+      SAVE
+    </button>
+  </div>
+
+  <div class="row justify-content-md-center border-top border-bottom">
+    <div id="t9" class="col-md-1" value="17">5 PM</div>
+
+    <textarea class="col-md-8" id="text9"></textarea>
+
+    <button
+      id="save"
+      class="col-md-1"
+      onclick="saveToLocal(document.getElementById('text9'))"
+    >
+      SAVE
+    </button>
+  </div>
+</div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
